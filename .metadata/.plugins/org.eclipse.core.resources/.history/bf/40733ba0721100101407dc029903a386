@@ -1,0 +1,22 @@
+package com.exam.entity;
+
+public class JwtResponse {
+
+	private String tocken;
+
+	
+	
+	public JwtResponse(String tocken) {
+		super();
+		this.tocken = tocken;
+	}
+
+	public String getTocken() {
+		return tocken;
+	}
+
+	public void setTocken(String tocken) {
+		this.tocken = tocken;
+	}
+	
+}
