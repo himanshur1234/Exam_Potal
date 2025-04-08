@@ -31,6 +31,13 @@ public class JwtAuthenticationFilter  extends OncePerRequestFilter{
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		
+		String path = request.getRequestURI();
+		if (path.equals("/generate-token") || path.equals("/user")) {
+		    filterChain.doFilter(request, response);
+		    return;
+		}
+
+		
 		String reqestTokenHeader = request.getHeader("Authorization");
 		
 		String username=null;

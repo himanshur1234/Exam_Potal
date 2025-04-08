@@ -53,10 +53,20 @@ export class SignupComponent {
         //error
         console.log(error);
         // alert("something went wrong");
-        this.snack.open("something went wrong!!","",{
+        this.snack.open("Username already there","",{
           duration:2000
         })
       }
     )
+  }
+
+  clearData(){
+  
+   this.user.username='',
+   this.user. password='',
+   this.user. firstName='',
+   this.user. lastName='',
+   this.user. email='',
+   this.user. phone='';
   }
 }

@@ -41,7 +41,7 @@ export class LoginService {
   public logout(){
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    //this.loginStatusSubject.next(false);
+    this.loginStatusSubject.next(false);
     return true;
   }
 
@@ -61,7 +61,7 @@ export class LoginService {
     if(userStr!=null){
       return JSON.parse(userStr);
     }else{
-      this.logout();
+      //this.logout();
       return null;
     }
   }

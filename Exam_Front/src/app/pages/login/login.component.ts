@@ -72,4 +72,13 @@ export class LoginComponent {
         })
       }
     )
-}}
+}
+clearData(){
+  this.loginData.password='';
+  this.loginData.username='';
+}
+
+
+
+
+}

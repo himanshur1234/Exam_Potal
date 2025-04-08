@@ -7,6 +7,8 @@ import { DashBoadComponent } from './pages/admin/dash-boad/dash-boad.component';
 import { UserDashboadComponent } from './pages/user/user-dashboad/user-dashboad.component';
 import { adminGuard } from './services/admin.guard';
 import { normalGuard } from './services/normal.guard';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -28,8 +30,19 @@ const routes: Routes = [
   {
     path: 'admin',
     component: DashBoadComponent,
-    pathMatch: 'full',
-    canActivate:[adminGuard]
+    //pathMatch: 'full',
+    canActivate:[adminGuard],
+    children:[
+      {
+        path:'',
+        component:WelcomeComponent,
+      },
+      {
+        path:'profile',
+        component:ProfileComponent,
+      },
+
+    ]
   },
   {
     path :'user-dashboad',
