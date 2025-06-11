@@ -9,6 +9,13 @@ import { adminGuard } from './services/admin.guard';
 import { normalGuard } from './services/normal.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
+import { ViewQuizzzesComponent } from './pages/admin/view-quizzzes/view-quizzzes.component';
+import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { UpdateCategoryComponent } from './pages/admin/update-category/update-category.component';
+import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 
 const routes: Routes = [
   {
@@ -41,6 +48,32 @@ const routes: Routes = [
         path:'profile',
         component:ProfileComponent,
       },
+      {
+        path:'categories',
+        component:ViewCategoriesComponent,
+      }
+      ,{
+        path:'add-category',
+        component:AddCategoriesComponent
+      },
+      {
+        path :'quizzes',
+        component: ViewQuizzzesComponent
+      },
+      {
+        path:'add-quiz',
+        component: AddQuizComponent
+      },
+      {
+        path:'quiz/:qid',
+        component:UpdateQuizComponent
+      },{
+        path:'caterory/:cid',
+        component:UpdateCategoryComponent
+      },{
+        path:'view-questions/:qid/:title',
+        component:ViewQuestionsComponent
+      }
 
     ]
   },

@@ -1,0 +1,16 @@
+.custom-list-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+  }
+  
+  .custom-icon {
+    margin-right: 12px;
+    margin-top: 4px;
+  }
+  
+  .custom-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }

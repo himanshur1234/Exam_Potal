@@ -1,3 +1,67 @@
 .full-width{
     width: 100%;
 }
+.login-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff4081;
+    transition: transform 0.3s;
+  }
+  /* Container and card styling */
+.bootstrap-wrapper {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding-top: 40px;
+  }
+  
+  .register-card {
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  
+  /* Logo */
+  .login-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #ff4081;
+  }
+  
+  /* Title */
+  .register-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form field full width */
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Button styling */
+  button[mat-raised-button] {
+    min-width: 120px;
+    font-weight: 500;
+  }
+  
+  /* Responsive spacing */
+  .ml-2 {
+    margin-left: 12px;
+  }
+  
+  .mt-3 {
+    margin-top: 24px;
+  }
+  
+  .mt-4 {
+    margin-top: 32px;
+  }
+  

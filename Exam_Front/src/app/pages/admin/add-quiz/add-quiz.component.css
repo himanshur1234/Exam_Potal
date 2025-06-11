@@ -1,0 +1,21 @@
+.w100{
+    width: 100%;
+}
+
+  .card-header {
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .form-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: #3f51b5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+  }

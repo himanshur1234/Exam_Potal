@@ -1,0 +1,56 @@
+/* Add to your component's CSS or global styles */
+.add-category-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: #3f51b5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-subtitle {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .category-form {
+    padding: 1rem 0;
+  }
+  
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content:center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .submit-button {
+    padding: 0 24px;
+  }
+  
+  .cancel-button {
+    padding: 0 24px;
+  }
+  
+  .mat-divider {
+    margin: 1rem 0;
+  }
+  .w100{
+    width: 100%;
+  }

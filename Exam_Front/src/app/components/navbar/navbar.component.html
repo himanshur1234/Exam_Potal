@@ -1,35 +1,18 @@
-<mat-toolbar color="accent">
-    <a 
-    routerLink="/"
-    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu_book</mat-icon>
-    </a>
-    <span>Examportal</span>
-    <span class="example-spacer"></span>
-    <a
-    *ngIf="!isLogedIn"
-    routerLink="/login"
-    mat-raised-button color="accent" >
-      Login
-    </a>
+<mat-toolbar color="accent" class="navbar">
+  <a routerLink="/" mat-icon-button class="logo-icon" aria-label="Menu icon">
+    <mat-icon>menu_book</mat-icon>
+  </a>
 
-    <a  
-    *ngIf="!isLogedIn"
-    routerLink="/signup"
-    mat-raised-button color="accent"  style="margin-right: 4rem; margin-left: 20px;">
-        Register
-    </a>
+  <span class="brand">Examportal</span>
+  <span class="spacer"></span>
 
-    <a
-    *ngIf="isLogedIn"
-    mat-raised-button color="accent"  style="margin-right: 4rem; margin-left: 20px;">
-       {{user?.username}}
-    </a>
+  <ng-container *ngIf="!isLogedIn">
+    <a routerLink="/login" mat-button class="nav-btn">Login</a>
+    <a routerLink="/signup" mat-button class="nav-btn">Register</a>
+  </ng-container>
 
-    <a  
-    (click)="logout()"
-    *ngIf="isLogedIn"
-    mat-raised-button color="accent"  style="margin-right: 4rem; margin-left: 20px;">
-        Logout
-    </a>
-  </mat-toolbar>
+  <ng-container *ngIf="isLogedIn">
+    <a mat-button routerLink="/admin/profile" class="nav-user">{{ user?.username }}</a>
+    <a (click)="logout()" mat-button class="nav-btn">Logout</a>
+  </ng-container>
+</mat-toolbar>

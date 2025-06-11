@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +24,16 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ViewQuizzzesComponent } from './pages/admin/view-quizzzes/view-quizzzes.component';
+import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { UpdateCategoryComponent } from './pages/admin/update-category/update-category.component';
+import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +48,13 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     ProfileComponent,
     SidebarComponent,
     WelcomeComponent,
+    ViewCategoriesComponent,
+    AddCategoriesComponent,
+    ViewQuizzzesComponent,
+    AddQuizComponent,
+    UpdateQuizComponent,
+    UpdateCategoryComponent,
+    ViewQuestionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +70,10 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    MatSelectModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

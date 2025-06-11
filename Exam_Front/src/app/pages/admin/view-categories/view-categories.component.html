@@ -1,0 +1,25 @@
+<mat-card style="padding: 20px;">
+  <h1>All Categories</h1>
+  <mat-list>
+    <ng-container *ngFor="let c of categories; let last = last">
+      <div class="custom-list-item">
+        <mat-icon class="custom-icon">category</mat-icon>
+
+        <div class="custom-content">
+          <div class="category-title">{{ c.title }}</div>
+          <div class="category-description">{{ c.description }}</div>
+        </div>
+        
+        <button mat-raised-button color="primary" style="margin-right: 20px;"  [routerLink]="'/admin/caterory/'+ c.cid">Edit</button>
+        <button mat-raised-button color="accent" (click)="deleteCategory(c.cid)">Delete</button>
+      </div>
+
+      <!-- Divider only if not the last item -->
+      <mat-divider *ngIf="!last"></mat-divider>
+    </ng-container>
+    <mat-divider></mat-divider>
+  </mat-list>
+  <div class="container text-center mt20">
+      <button routerLink="/admin/add-category" mat-raised-button color="primary">Add new Categories</button>
+  </div>
+</mat-card>

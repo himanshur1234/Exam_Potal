@@ -1,0 +1,47 @@
+<mat-card class="add-category-card">
+  <mat-card-header class="card-header ">
+    <mat-card-title>
+      <h1 class="form-title">Add New Category</h1>
+    </mat-card-title>
+    <mat-card-subtitle class="form-subtitle">Create a new category to organize your content</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form class="category-form" (ngSubmit)="formSubmit()">
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Title</mat-label>
+                <input  required matInput type="text" name="title" placeholder="e.g. 'Electronics', 'Books', etc." [(ngModel)]="category.title">
+                <mat-icon matSuffix>title</mat-icon>
+                <mat-hint>Enter a descriptive title for your category</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Description</mat-label>
+                <textarea matInput name="description" placeholder="Describe what this category contains..." rows="4" [(ngModel)]="category.description"></textarea>
+                <mat-icon matSuffix>description</mat-icon>
+                <mat-hint>Provide details about this category</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="form-actions ">
+              <button mat-raised-button color="primary" type="submit" class="submit-button">
+                <mat-icon>add_circle</mat-icon>
+                Add Category
+              </button>
+              <button mat-stroked-button color="basic" type="button" class="cancel-button" (click)="clear()">
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

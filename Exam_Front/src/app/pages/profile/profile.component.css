@@ -1,0 +1,86 @@
+.profile-image{
+    max-width: 150px;
+    max-height: 150px;
+    border: 2px solid #ff4081;
+    border-radius: 50%;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table tr td{
+    padding: 15px 10px;
+    border:.5px solid #e2e2e2;
+    
+    
+}
+.profile-card {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+  }
+  
+  .profile-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+  
+  .profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #ff4081;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 15px;
+  }
+  
+  .profile-table td {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #555;
+  }
+  
+  .badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  
+  .admin-role {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .active-status {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .button-group {
+    margin-top: 25px;
+  }
+  
+  .action-button {
+    margin: 0 10px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+  }
+  

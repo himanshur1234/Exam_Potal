@@ -32,3 +32,10 @@ margin-left: 20px !important;
 .mb10{
     margin-bottom: 10px !important;
     }
+
+.imageStyle{
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+}

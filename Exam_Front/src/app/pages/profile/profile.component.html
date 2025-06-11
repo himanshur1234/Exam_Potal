@@ -1,21 +1,43 @@
-<mat-card>
-   <h1>Your profile details</h1>
-   <mat-card-content>
-    
-    <div class="bootstrap-wrapper">
-        <div class="container">
-
-            <div class="container text-center">
-                <img src="/public/favicon.ico" alt="logo">
-            </div>
-
-            <div class="row">
-                <div class="col-md-10 offset-mt-1">
-                    //table
-                </div>
-            </div>
-        </div>
-    </div>
-    
-   </mat-card-content>
-</mat-card>
+<mat-card *ngIf="user" class="profile-card">
+    <!-- {{user |json}} -->
+    <mat-card-content>
+      <h1 class="profile-title">👤 Your Profile Details</h1>
+  
+      <div class="container text-center">
+        <img [src]="'assets/images/profile.png'" alt="Profile Image" class="profile-image mb-3" />
+  
+        <h2 class="profile-name">{{user.firstName}} {{user.lastName}}</h2>
+      </div>
+  
+      <div class="table-wrapper">
+        <table class="table table-bordered profile-table">
+          <tr>
+            <td><strong>Username</strong></td>
+            <td>{{user.username}}</td>
+          </tr>
+          <tr>
+            <td><strong>User ID</strong></td>
+            <td>EXAM{{ user.id}}</td>
+          </tr>
+          <tr>
+            <td><strong>Phone</strong></td>
+            <td>{{user.phone}}</td>
+          </tr>
+          <tr>
+            <td><strong>Role</strong></td>
+            <td><span class="badge admin-role">{{user.authorities[0].authority}}</span></td>
+          </tr>
+          <tr>
+            <td><strong>Status</strong></td>
+            <td><span class="badge active-status">{{user.enabled?"ACTIVE":"NOTACTIVE"}}</span></td>
+          </tr>
+        </table>
+      </div>
+  
+      <div class="button-group text-center">
+        <button mat-raised-button color="primary" class="action-button">UPDATE</button>
+        <button mat-raised-button color="accent" class="action-button">SHARE</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
