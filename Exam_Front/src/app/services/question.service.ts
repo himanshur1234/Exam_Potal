@@ -13,4 +13,22 @@ export class QuestionService {
   public getQuestionsOfQuiz(qid:number){
    return  this._http.get(`${baseUrl}/questions/quiz/all/${qid}`)
   }
+
+  public addQuestion(question:any){
+    return this._http.post(`${baseUrl}/questions/`,question);
+  }
+
+  public deleteQuestion(quesId:number){
+    return this._http.delete(`${baseUrl}/questions/${quesId}`);
+  }
+
+  public updateQuestion(question:any){
+    return this._http.put(`${baseUrl}/questions/`,question);
+  }
+
+  // single question
+  public getOneQuestion(quesId:number){
+    return this._http.get(`${baseUrl}/questions/${quesId}`);
+  }
+
 }
