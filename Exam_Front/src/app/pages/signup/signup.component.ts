@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent {
 
- constructor(private userService:UserService,private snack:MatSnackBar){}
+ constructor(private userService:UserService,private snack:MatSnackBar,private _route:Router){}
   
 
   public user={
@@ -25,7 +26,7 @@ export class SignupComponent {
  
   formSubmit()
   {
-   console.log(this.user)
+   // console.log(this.user)
    //validate 
     if(this.user.username==''||this.user.username==null){
       // alert("user required");
@@ -48,6 +49,8 @@ export class SignupComponent {
         console.log(data);
         // alert("success");
         Swal.fire("successfully done !!","user id is "+ data.id,"success")
+
+        this._route.navigate(['/login'])
       },
       (error)=>{
         //error

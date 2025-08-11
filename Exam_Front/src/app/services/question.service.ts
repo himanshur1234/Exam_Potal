@@ -9,6 +9,10 @@ export class QuestionService {
 
   constructor(private _http:HttpClient) { }
 
+  public getQuestion(qid:number){
+    return this._http.get(`${baseUrl}/questions/quiz/${qid}`)
+  }
+
 
   public getQuestionsOfQuiz(qid:number){
    return  this._http.get(`${baseUrl}/questions/quiz/all/${qid}`)

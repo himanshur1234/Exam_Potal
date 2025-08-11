@@ -18,6 +18,9 @@ import { UpdateCategoryComponent } from './pages/admin/update-category/update-ca
 import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 const routes: Routes = [
   {
@@ -89,9 +92,23 @@ const routes: Routes = [
   {
     path :'user-dashboad',
     component: UserDashboadComponent,
-    pathMatch: 'full',
-    canActivate:[normalGuard]
+    //pathMatch: 'full',
+    canActivate:[normalGuard],
+     children:[
+      {
+      path:'load/:catid',
+      component:LoadQuizComponent
+     },{
+      path:'instruction/:qid',
+      component:InstructionsComponent
+     },
+    ]
   },
+  {
+      path:'start/:qid',
+      component:StartComponent,
+      canActivate:[normalGuard]
+  }
 ];
 
 @NgModule({
